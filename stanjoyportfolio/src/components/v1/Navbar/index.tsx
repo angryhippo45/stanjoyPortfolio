@@ -4,6 +4,7 @@ import LinkBar from './LinkBar';
 import {
     SunIcon
   } from "@heroicons/react/24/outline";
+import IconButton from '../Buttons/IconButton';
 
 
 export default function Navbar() {
@@ -13,8 +14,11 @@ export default function Navbar() {
                 {/* Logo */}
                 <Image src={'/logoV2BlueTransperent.svg'} alt='image' width={50} height={50} />
                 <LinkBar />
-                
-                <SunIcon width={50} height={50}/>
+                <IconButton onClick={() => console.log('Dark mode toggled')}
+                    icon={SunIcon}
+                    className="text-gray-500 hover:text-black transition-colors"
+                    label="Toggle Dark Mode"
+                />
             </div>
         </div>
     );
